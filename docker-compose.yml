@@ -1,0 +1,7 @@
+# Only Redis (the Celery broker). The database is SQLite - no Postgres needed.
+# Skip this file entirely if you install Redis natively (brew / apt / WSL / Memurai).
+services:
+  redis:
+    image: redis:7-alpine
+    ports:
+      - '6379:6379'
